@@ -1,0 +1,156 @@
+/* Hero mit Text-Overlay (shared mit Altenpflegeheim) */
+.hero-overlay {
+    position: relative;
+}
+
+.hero-overlay::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    pointer-events: none;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 3rem;
+    z-index: 2;
+    color: #fff;
+}
+
+.hero-text h1 {
+    color: #fff;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-text p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(0.9rem, 2vw, 1.15rem);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Intro */
+.tp-intro {
+    text-align: left;
+    margin-bottom: 3rem;
+    padding-top: 1.5rem;
+}
+
+.tp-intro h2 {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    color: #07546e;
+    margin-bottom: 0.3rem;
+}
+
+/* Drei Säulen Box */
+.saeulen-box {
+    background-color: #07546e;
+    border-radius: 1.5rem;
+    padding: 3rem 3rem 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.saeulen-titel {
+    font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 2.2rem;
+}
+
+.saeulen-cards {
+    display: flex;
+    gap: 2.8rem;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.saeulen-card {
+    flex: 1;
+}
+
+.saeulen-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    border-radius: 0.6rem;
+    font-size: 1.05rem;
+    margin-bottom: 1.3rem;
+}
+
+.saeulen-card .saeulen-line {
+    display: block;
+    width: 110px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.35);
+    margin: 1.5rem auto 1rem;
+}
+
+.saeulen-card p {
+    font-size: 0.85rem;
+    color: #fff;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Textblöcke */
+.tp-textblock {
+    margin-bottom: 2rem;
+}
+
+.tp-textblock h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: #07546e;
+    margin-bottom: 0.75rem;
+}
+
+.tp-textblock h3 {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.tp-textblock p {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+}
+
+/* Trennlinie */
+.tp-divider {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 1.5rem 41px 2.5rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-text {
+        bottom: 1.5rem;
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .saeulen-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .saeulen-cards {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}

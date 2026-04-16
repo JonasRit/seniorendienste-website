@@ -1,0 +1,531 @@
+/* Hero mit Text-Overlay */
+.hero-overlay {
+    position: relative;
+}
+
+.hero-overlay::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    pointer-events: none;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 3rem;
+    z-index: 2;
+    color: #fff;
+}
+
+.hero-text h1 {
+    color: #fff;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-text p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(0.9rem, 2vw, 1.15rem);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Intro — linksbündig wie im InDesign */
+.aph-intro {
+    text-align: left;
+    margin-bottom: 4rem;
+    padding-top: 1.5rem;
+}
+
+.aph-headline {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    color: #07546e;
+    margin-bottom: 0.3rem;
+}
+
+.aph-subtitle {
+    font-style: italic;
+    color: #777;
+    font-size: 1.1rem;
+}
+
+/* Drei Säulen Box */
+.saeulen-box {
+    background-color: #07546e;
+    border-radius: 1.5rem;
+    padding: 3rem 3rem 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.saeulen-titel {
+    font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.saeulen-untertitel {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 2.2rem;
+}
+
+.saeulen-cards {
+    display: flex;
+    gap: 2.8rem;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.saeulen-card {
+    flex: 1;
+}
+
+.saeulen-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    border-radius: 0.6rem;
+    font-size: 1.05rem;
+    margin-bottom: 1.3rem;
+}
+
+.saeulen-card .saeulen-line {
+    display: block;
+    width: 110px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.35);
+    margin: 1.5rem auto 1rem;
+}
+
+.saeulen-card p {
+    font-size: 0.85rem;
+    color: #fff;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Zitat-Bereich */
+.aph-zitat {
+    text-align: center;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+}
+
+.aph-zitat h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: #07546e;
+    margin-bottom: 0.75rem;
+}
+
+.aph-zitat-text {
+    font-style: italic;
+    color: #777;
+    font-size: 1.05rem;
+}
+
+/* Inhaltssektionen: Texte links, Bilder rechts */
+.aph-content {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.aph-texte {
+    flex: 1;
+}
+
+.aph-textblock {
+    margin-bottom: 2rem;
+}
+
+.aph-textblock h3 {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: #000;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.aph-textblock p {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+}
+
+.aph-bilder {
+    flex: 0 0 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.aph-bilder img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    display: block;
+}
+
+/* Trennlinie */
+.aph-divider {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 1.5rem 41px 2.5rem;
+}
+
+/* Stationäre Kurzzeitpflege Info */
+.aph-kzp-info {
+    margin-bottom: 3rem;
+}
+
+.aph-kzp-headline {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    color: #07546e;
+    margin-bottom: 2rem;
+}
+
+.aph-kzp-intro,
+.aph-kzp-details {
+    margin-bottom: 2rem;
+}
+
+.aph-kzp-intro h3,
+.aph-kzp-details h3 {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.aph-kzp-intro p,
+.aph-kzp-details p {
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+/* Kurzzeitpflege Rechner */
+.kzp-rechner {
+    margin-top: 1rem;
+}
+
+.kzp-titel {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.kzp-form {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.kzp-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.kzp-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+    min-width: 160px;
+}
+
+.kzp-field label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #07546e;
+}
+
+.kzp-field input,
+.kzp-field select {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    width: 100%;
+}
+
+.kzp-field input:focus,
+.kzp-field select:focus {
+    outline: none;
+    border-color: #07546e;
+    background-color: #fff;
+}
+
+.kzp-input-euro {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.kzp-input-euro input {
+    flex: 1;
+}
+
+.kzp-input-euro span {
+    font-weight: 700;
+    color: #555;
+}
+
+.kzp-fehler {
+    color: #db2234;
+    font-size: 0.85rem;
+    min-height: 0;
+    margin-top: 0.3rem;
+}
+
+.kzp-frage {
+    margin-top: 1.5rem;
+}
+
+.kzp-frage p {
+    font-weight: 700;
+    color: #07546e;
+    margin-bottom: 0.75rem;
+}
+
+.kzp-buttons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.kzp-btn {
+    padding: 0.5rem 2rem;
+    border: 2px solid #07546e;
+    border-radius: 0.4rem;
+    background-color: #fff;
+    color: #07546e;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.kzp-btn:hover {
+    background-color: #07546e;
+    color: #fff;
+}
+
+.kzp-btn.active {
+    background-color: #07546e;
+    color: #fff;
+    border-color: #07546e;
+}
+
+.kzp-btn.active:hover {
+    background-color: #053d50;
+    border-color: #053d50;
+}
+
+.kzp-restbetrag {
+    display: none;
+    margin-top: 1.5rem;
+}
+
+.kzp-restbetrag-titel {
+    font-weight: 700;
+    color: #07546e;
+    margin-bottom: 0.75rem;
+}
+
+.kzp-rechnen-btn {
+    display: block;
+    margin-top: 1.5rem;
+    padding: 0.7rem 2.5rem;
+    background-color: #07546e;
+    color: #fff;
+    border: none;
+    border-radius: 0.4rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.kzp-rechnen-btn:hover {
+    background-color: #053d50;
+}
+
+/* Ergebnistabelle */
+.kzp-ergebnis {
+    display: none;
+    margin-top: 1.5rem;
+}
+
+.kzp-ergebnis table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.kzp-ergebnis thead {
+    border-bottom: 2px solid #07546e;
+}
+
+.kzp-ergebnis th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #07546e;
+}
+
+.kzp-ergebnis td {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+}
+
+.kzp-ergebnis tbody tr:first-child td {
+    font-weight: 400;
+}
+
+.kzp-leer-row {
+    height: 0;
+}
+
+.kzp-summe-row {
+    background-color: #07546e;
+    font-weight: 700;
+}
+
+.kzp-summe-row td {
+    border-bottom: none;
+    font-weight: 700;
+    color: #fff;
+}
+
+.kzp-zusatztage {
+    margin-top: 1rem;
+    color: #07546e;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+/* Mobile Karten statt Tabelle */
+.kzp-mobil-cards {
+    display: none;
+}
+
+.kzp-mobil-card {
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 1.2rem;
+}
+
+.kzp-mobil-card h4 {
+    color: #07546e;
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid #8ac3bc;
+}
+
+.kzp-mobil-card.kzp-mobil-summe {
+    background-color: #07546e;
+    color: #fff;
+}
+
+.kzp-mobil-card.kzp-mobil-summe h4 {
+    color: #fff;
+    border-bottom-color: #8ac3bc;
+}
+
+.kzp-mobil-card.kzp-mobil-summe .kzp-mobil-row span:first-child {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.kzp-mobil-card.kzp-mobil-summe .kzp-mobil-row span:last-child {
+    color: #fff;
+}
+
+.kzp-mobil-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+.kzp-mobil-row span:first-child {
+    color: #666;
+}
+
+.kzp-mobil-row span:last-child {
+    font-weight: 700;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-text {
+        bottom: 1.5rem;
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .saeulen-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .saeulen-cards {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .aph-content {
+        flex-direction: column;
+    }
+
+    .aph-bilder {
+        flex: none;
+        width: 100%;
+    }
+
+    .kzp-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .kzp-ergebnis table {
+        display: none;
+    }
+
+    .kzp-ergebnis .kzp-mobil-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .kzp-form {
+        padding: 1.5rem 1rem;
+    }
+}

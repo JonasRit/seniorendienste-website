@@ -1,0 +1,164 @@
+/* Angebotsseite - Puzzle Layout */
+
+.puzzle-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+/* Legende links */
+.puzzle-legende {
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-top: 2rem;
+}
+
+.legende-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.legende-nummer {
+    height: 2rem;
+    width: 2rem;
+    min-width: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background-color: #db2234;
+}
+
+/* Puzzle-Kreis Bereich */
+.puzzle-kreis {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    flex-shrink: 0;
+}
+
+.puzzle-bilder {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.puzzle-teil {
+    position: absolute;
+}
+
+.puzzle-bild-wrap {
+    position: relative;
+    cursor: pointer;
+}
+
+.puzzle-bild-wrap img {
+    filter: brightness(75%);
+    transition: transform 0.4s, filter 0.4s;
+}
+
+.puzzle-bild-wrap:hover img {
+    transform: scale(1.08);
+    filter: brightness(100%);
+    z-index: 10;
+}
+
+/* Positionen der 8 Puzzleteile im Kreis */
+.p1 { top: 75px; left: 350px; }
+.p2 { top: 185px; left: 490px; }
+.p3 { top: 430px; left: 500px; }
+.p4 { top: 80px; left: 170px; }
+.p5 { top: 200px; left: 60px; }
+.p6 { top: 400px; left: 55px; }
+.p7 { top: 570px; left: 190px; }
+.p8 { top: 555px; left: 430px; }
+
+.p1 img { height: 250px; }
+.p2 img { height: 315px; }
+.p3 img { height: 272px; }
+.p4 img { height: 260px; }
+.p5 img { height: 272px; }
+.p6 img { height: 316px; }
+.p7 img { height: 247px; }
+.p8 img { height: 261px; }
+
+/* Nummern auf den Puzzleteilen */
+.puzzle-nr {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background-color: #db2234;
+    z-index: 15;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Nummern-Positionen auf den Puzzleteilen */
+.p1 .puzzle-nr { top: 15px; left: 30px; }
+.p2 .puzzle-nr { top: 30px; left: 130px; }
+.p3 .puzzle-nr { top: 15px; left: 200px; }
+.p4 .puzzle-nr { top: 105px; left: 25px; }
+.p5 .puzzle-nr { top: 225px; left: 15px; }
+.p6 .puzzle-nr { top: 255px; left: 100px; }
+.p7 .puzzle-nr { top: 195px; left: 215px; }
+.p8 .puzzle-nr { top: 123px; left: 243px; }
+
+/* Info-Kreis in der Mitte */
+.puzzle-info-kreis {
+    position: absolute;
+    top: 290px;
+    left: 230px;
+    width: 300px;
+    height: 300px;
+    border: 4px solid #db2234;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.puzzle-info {
+    display: none;
+    text-align: center;
+    padding: 1.5rem;
+    animation: fadeIn 0.4s ease;
+}
+
+.puzzle-info.active {
+    display: block;
+}
+
+.puzzle-info h3 {
+    color: #db2234;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.puzzle-info p {
+    color: #555;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

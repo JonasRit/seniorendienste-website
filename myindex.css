@@ -1,0 +1,47 @@
+/* Seitenspezifische Styles für index.html */
+
+.intro-section {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-image {
+    flex: 0 0 50%;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.intro-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #db2234;
+    border-radius: 2px;
+}
+
+.intro-image img {
+    width: 100%;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .intro-image {
+        flex: none;
+        width: 100%;
+    }
+}
