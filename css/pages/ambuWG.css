@@ -1,0 +1,12 @@
+/* Ambulant betreute WG — überschreibt altenpflegeheim.css wo nötig */
+
+.saeulen-cards {
+    max-width: 900px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.saeulen-card {
+    flex: 0 0 calc(25% - 1.2rem);
+}

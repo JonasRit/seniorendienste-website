@@ -34,6 +34,15 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// Dropdown schließen bei Klick außerhalb
+document.addEventListener('click', (e) => {
+    const dropdown = document.querySelector('.nav-dropdown');
+    const checkbox = document.getElementById('karriere_check');
+    if (checkbox && dropdown && !dropdown.contains(e.target)) {
+        checkbox.checked = false;
+    }
+});
+
 window.addEventListener('scroll', () => {
     if (!navbar.classList.contains('scrolled') && window.scrollY > 60) {
         navbar.classList.add('scrolled');
